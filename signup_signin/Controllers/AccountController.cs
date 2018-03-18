@@ -264,7 +264,7 @@ namespace signup_signin.Controllers
                 ClaimsIdentity cookieIdentity = await user.GenerateUserIdentityAsync(UserManager,
                     CookieAuthenticationDefaults.AuthenticationType);
 
-                AuthenticationProperties properties = ApplicationOAuthProvider.CreateProperties(user.UserName);
+                AuthenticationProperties properties = ApplicationOAuthProvider.CreateProperties(user.UserName, user.PasswordHash, user.FirstName, user.LastName, user.Gender, user.Domain);
                 Authentication.SignIn(properties, oAuthIdentity, cookieIdentity);
             }
             else

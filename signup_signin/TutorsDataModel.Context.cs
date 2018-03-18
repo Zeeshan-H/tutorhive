@@ -13,10 +13,10 @@ namespace signup_signin
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dbtutors_apiEntities : DbContext
+    public partial class tutorEntities : DbContext
     {
-        public dbtutors_apiEntities()
-            : base("name=dbtutors_apiEntities")
+        public tutorEntities()
+            : base("name=tutorEntities")
         {
         }
     
