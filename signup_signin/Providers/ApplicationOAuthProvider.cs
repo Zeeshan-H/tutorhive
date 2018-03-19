@@ -44,7 +44,7 @@ namespace signup_signin.Providers
             ClaimsIdentity cookiesIdentity = await user.GenerateUserIdentityAsync(userManager,
                 CookieAuthenticationDefaults.AuthenticationType);
 
-            AuthenticationProperties properties = CreateProperties(user.UserName, user.PasswordHash, user.FirstName, user.LastName, user.Gender, user.Domain);
+            AuthenticationProperties properties = CreateProperties(user.UserName,user.Names, user.PasswordHash, user.Gender, user.Domain, user.Dob, user.Address);
             AuthenticationTicket ticket = new AuthenticationTicket(oAuthIdentity, properties);
             context.Validated(ticket);
             context.Request.Context.Authentication.SignIn(cookiesIdentity);
@@ -86,16 +86,20 @@ namespace signup_signin.Providers
             return Task.FromResult<object>(null);
         }
 
-        public static AuthenticationProperties CreateProperties(string userName, string password, string fname, string lname, string gender,string domain)
+        public static AuthenticationProperties CreateProperties(string userName,string name, string password,  string gender,string domain,string dob, string add)
         {
             IDictionary<string, string> data = new Dictionary<string, string>
             {
                 { "userName", userName },
+                {"Name", name},
                 {"Password", password},
-                {"First Name", fname},
-                {"Last Name", lname},
+                
+             
                 {"Gender", gender},
-                {"Domain", domain}
+                {"Domain", domain},
+                {"Date of Birth", dob},
+                {"Address", add}
+
             };
             return new AuthenticationProperties(data);
         }

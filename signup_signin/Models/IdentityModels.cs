@@ -13,15 +13,11 @@ namespace signup_signin.Models
     {
 
 
-        [Required(ErrorMessage = "First Name is Required"), DisplayName("First Name")]
+        [Required(ErrorMessage = "Your Name is Required"), DisplayName("Name")]
         [StringLength(60, MinimumLength = 3)]
 
-        public string FirstName { get; set; }
+        public string Names { get; set; }
 
-        [Required(ErrorMessage = "Last Name is Required"), DisplayName("Last Name")]
-        [StringLength(60, MinimumLength = 3)]
-
-        public string LastName { get; set; }
 
         [Required(ErrorMessage = "Please select a valid Gender"), DisplayName("Gender")]
         [StringLength(60, MinimumLength = 3)]
@@ -32,6 +28,16 @@ namespace signup_signin.Models
         [Required(ErrorMessage = "Please select your registration role!"), DisplayName("Domain")]
 
         public string Domain { get; set; }
+
+        [Required(ErrorMessage = "Please select your date of birth"), DisplayName("Date Of Birth")]
+        [DataType(DataType.Date)]
+        public string Dob { get; set; }
+
+         [Required(ErrorMessage = "Please enter your residential address"), DisplayName("Domain")]
+         [MaxLengthAttribute]
+
+        public string Address { get; set; }
+
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {

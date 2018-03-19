@@ -24,14 +24,11 @@
                     </tr>
 
                     <tr>
-                        <td>First Name</td>
-                        <td><input type="text" id="txtF" placeholder="Email" /> </td>
+                        <td>Name</td>
+                        <td><input type="text" id="txtF"  /> </td>
                     </tr>
 
-                    <tr>
-                        <td>Last Name</td>
-                        <td><input type="text" id="txtL" placeholder="Email" /> </td>
-                    </tr>
+                    
 
                     <tr>
                         <td>Gender</td>
@@ -55,6 +52,34 @@
                             </select>
                         </td>
                     </tr>
+
+
+                    <tr>
+
+                        <td>Date Of Birth</td>
+                        <td>
+                            <input type="date" name="bday" id="bdayselect" />
+                          
+
+
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Address</td>
+                        <td>
+
+
+                            <textarea rows="4" cols="40" id="addresstext"></textarea>
+
+                        </td>
+
+
+                    </tr>
+
 
 
 
@@ -136,10 +161,12 @@
 
                     data: {
                         email: $('#txtEmail').val(),
-                        FirstName: $('#txtF').val(),
-                        LastName: $('#txtL').val(),
+                        Names: $('#txtF').val(),
+                        
                         Gender: $('#genselect').val(),
                         Domain: $('#regselect').val(),
+                        Dob: $('#bdayselect').val(),
+                        Address: $('#addresstext').val(),
 
 
                         password: $('#txtPassword').val(),

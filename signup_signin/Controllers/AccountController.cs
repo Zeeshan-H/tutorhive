@@ -264,7 +264,7 @@ namespace signup_signin.Controllers
                 ClaimsIdentity cookieIdentity = await user.GenerateUserIdentityAsync(UserManager,
                     CookieAuthenticationDefaults.AuthenticationType);
 
-                AuthenticationProperties properties = ApplicationOAuthProvider.CreateProperties(user.UserName, user.PasswordHash, user.FirstName, user.LastName, user.Gender, user.Domain);
+                AuthenticationProperties properties = ApplicationOAuthProvider.CreateProperties(user.UserName, user.Names, user.PasswordHash, user.Gender, user.Domain, user.Dob, user.Address);
                 Authentication.SignIn(properties, oAuthIdentity, cookieIdentity);
             }
             else
@@ -328,7 +328,7 @@ namespace signup_signin.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, Gender = model.Gender, Domain = model.Domain };
+            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email,Names = model.Names, Gender = model.Gender, Domain = model.Domain, Dob = model.Dob, Address = model.Address };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 

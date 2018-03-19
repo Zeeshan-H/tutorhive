@@ -50,18 +50,11 @@ namespace signup_signin.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
-        [Required(ErrorMessage = "First Name is Required"), DisplayName("First Name")]
+        [Required(ErrorMessage = "Your Name is Required"), DisplayName("Name")]
         [StringLength(60, MinimumLength = 3)]
 
-        public string FirstName { get; set; }
+        public string Names { get; set; }
 
-        [Required(ErrorMessage = "Last Name is Required"), DisplayName("Last Name")]
-        [StringLength(60, MinimumLength = 3)]
-
-        public string LastName { get; set; }
-
-        [Required(ErrorMessage = "Please select a valid Gender"), DisplayName("Gender")]
-        [StringLength(60, MinimumLength = 3)]
 
 
         public string Gender { get; set; }
@@ -70,6 +63,15 @@ namespace signup_signin.Models
 
         public string Domain { get; set; }
 
+
+        [Required(ErrorMessage = "Please select your date of birth"), DisplayName("Date Of Birth")]
+        [DataType(DataType.Date)]
+        public string Dob { get; set; }
+
+        [Required(ErrorMessage = "Please enter your residential address"), DisplayName("Domain")]
+        [MaxLengthAttribute]
+
+        public string Address { get; set; }
 
 
     }
