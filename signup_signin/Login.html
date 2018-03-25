@@ -82,6 +82,7 @@
                     success: function (response) {
                  
                         localStorage.setItem("Username", response.username);
+                        localStorage.setItem("accessToken", response.access_token);
                         window.location.href = "Data.html";
                     },
                     // Display errors if any in the Bootstrap alert <div>
