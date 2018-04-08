@@ -97,7 +97,7 @@ namespace signup_signin.Providers
              
                 {"Gender", gender},
                 {"Domain", domain},
-                {"Date of Birth", dob},
+                {"Dob", dob},
                 {"Address", add}
 
             };
