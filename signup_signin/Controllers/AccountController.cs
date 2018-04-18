@@ -337,7 +337,7 @@ namespace signup_signin.Controllers
                 return GetErrorResult(result);
             }
 
-            return Ok("User has been successfuly registered!");
+            return Ok(user.id);
         }
 
         // POST api/Account/RegisterExternal
