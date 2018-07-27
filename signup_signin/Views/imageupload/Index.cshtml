@@ -1,0 +1,58 @@
+﻿@model signup_signin.Models.ImageViewModel
+
+<div class="container">
+
+    <div class="col-md-10 col-md-offset-1">
+        <div class="well">
+
+            <input type="file" id="Selectimg" />
+
+            <a href="#" class="btn btn-danger" onclick="UploadImage()">Upload</a>
+
+
+            </div>
+
+        </div>
+
+
+    <div class="col-md-4 thumbnail" id="UploadedImage"></div>
+
+
+
+        </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+    var UploadImage = function () {
+
+        var file = $('#Selectimg').get(0).files;
+        var data = new FormData;
+        data.append("ImageFile", file[0]);
+        $.ajax({
+
+            type: "POST",
+            url: "/imageupload/upload",
+            data: data,
+            contentType: false,
+            processData: false,
+            success: function (imgId) {
+
+                $('#UploadedImage').append('<img src="/api/try/ImageGet?imagename=22886057_912805578881849_66332535596304451_n.jpg" class = "img-responsive thumbnail" />');
+               
+               
+        //        $('#UploadedImage').append('<img src="/imageupload/display?imgId=' + imgId + '" class = "img-responsive thumbnail" />');
+              
+            }
+
+
+
+
+
+
+        })
+
+    }
+
+    </script>
