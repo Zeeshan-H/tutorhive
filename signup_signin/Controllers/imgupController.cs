@@ -49,13 +49,17 @@ namespace signup_signin.Controllers
        
         [HttpGet]
 
-        public List<int> GetImage()
+        public IEnumerable<img> Get()
         {
-            tutorEntities db = new tutorEntities();
-            var data = from i in db.imgs
-                       select i.imgId;
-            return data.ToList();
+            using (tutorEntities entities = new tutorEntities())
+            {
+
+                return entities.imgs.ToList();
+
+            }
+
         }
+
 
         [HttpGet]
 
