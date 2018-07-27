@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Welcome</title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="col-md-10 col-md-offset-1">
+        <div class="well">
+            <h1 class="success">Welcome Authorized User!</h1>
+            <h3 id="spanUsername" class="text-success"></h3>
+
+        </div>
+
+    </div>
+
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+
+
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+                $(document).ready(function () {
+
+                  
+                    $('#spanUsername').text('Hello ' + localStorage.getItem('userName'));
+     
+
+
+                    if (localStorage.getItem('accessToken') == null ) {
+                        window.location.href = "Login.html";
+
+
+                    }
+                    else {
+                        
+                        $('#divErrorText').text(jqXHR.responseText);
+                        $('#divError').show('fade');
+                    }
+
+
+
+                });
+    </script>
+
+</body>
+</html>

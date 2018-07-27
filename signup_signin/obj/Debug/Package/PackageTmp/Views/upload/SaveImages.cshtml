@@ -1,0 +1,37 @@
+﻿@using (Html.BeginForm("SaveImages", "upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+    @Html.TextBox("uploadedImage", "", new {type = "File" })
+    
+    
+    <input type="submit" value="Upload" />
+    
+    
+    @{
+        
+    if (ViewBag.Message != null)
+    {
+        @ViewBag.imgName
+        
+        <br /> <br />
+        
+        @ViewBag.Message
+    }
+        
+        
+    }
+
+        <div>
+        @if (Model != null)
+        {
+            
+            <img class="img-responsive" width="200" height="400" src="@Url.Content("~/UploadedImages/" + Model.imgName)" />
+
+            
+        }
+
+            </div>
+    
+        </div>
+    
+}
