@@ -25,7 +25,7 @@ namespace signup_signin.Controllers
             tutorEntities db = new tutorEntities();
 
             //Get the path of folder where we want to upload all files.
-             string rootPath = HttpContext.Current.Server.MapPath("~/UserImage");
+             string rootPath = HttpContext.Current.Server.MapPath("https://github.com/shahraizali/tutor_api/tree/master/signup_signin");
 
            
 
