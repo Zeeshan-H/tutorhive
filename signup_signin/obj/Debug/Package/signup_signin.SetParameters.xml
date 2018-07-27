@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <setParameter name="IIS Web Application Name" value="Default Web Site/" />
-  <setParameter name="DefaultConnection-Web.config Connection String" value="Data Source=den1.mssql5.gear.host;Initial Catalog=tutor;User ID=tutor;Password=Mq3ad_dWS?j0" />
-  <setParameter name="tutorEntities-Web.config Connection String" value="metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=den1.mssql5.gear.host;initial catalog=tutor;persist security info=True;user id=tutor;password=Mq3ad_dWS?j0;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
-</parameters>
