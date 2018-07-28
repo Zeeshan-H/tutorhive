@@ -332,7 +332,10 @@ namespace signup_signin.Controllers
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
-
+             if (!result.Succeeded)
+            {
+                return GetErrorResult(result);
+            }
 
             return Ok(user);
         }
