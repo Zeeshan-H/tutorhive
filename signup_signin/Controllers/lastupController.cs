@@ -60,7 +60,7 @@ namespace signup_signin.Controllers
 
 
 
-                                var filePath = HttpContext.Current.Server.MapPath("~/Userimage/" + postedFile.FileName + extension);
+                                var filePath = HttpContext.Current.Server.MapPath("https://github.com/shahraizali/tutor_api/tree/master/signup_signin/UserImage/" + postedFile.FileName + extension);
 
                                 postedFile.SaveAs(filePath);
 
