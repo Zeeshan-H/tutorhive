@@ -11,12 +11,6 @@ namespace signup_signin.Controllers
 {
     public class lastupController : ApiController
     {
-
-        [RoutePrefix("api/Upload")]
-        public class UploadController : ApiController
-        {
-
-            [Route("user/PostUserImage")]
             [AllowAnonymous]
             public async Task<HttpResponseMessage> PostUserImage()
             {
@@ -84,5 +78,5 @@ namespace signup_signin.Controllers
 
         }
 
-    }
+    
 }
