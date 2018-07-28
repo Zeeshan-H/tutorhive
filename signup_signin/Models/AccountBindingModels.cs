@@ -36,6 +36,7 @@ namespace signup_signin.Models
     public class RegisterBindingModel
     {
         [Required]
+        [EmailAddress(ErrorMessage = "Not a valid Email")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
