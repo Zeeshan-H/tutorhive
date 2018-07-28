@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=den1.mssql5.gear.host;Initial Catalog=tutor;User ID=tutor;Password=Mq3ad_dWS?j0" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="H:\\Ms\ Visual\ Studio\ 2013\ \ Ultimate\ \+\ Serial\ \[danhuk]\\Projects\\signup_signin\\signup_signin\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
-  </parameter>
-  <parameter name="tutorEntities-Web.config Connection String" description="tutorEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=den1.mssql5.gear.host;initial catalog=tutor;persist security info=True;user id=tutor;password=Mq3ad_dWS?j0;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="H:\\Ms\ Visual\ Studio\ 2013\ \ Ultimate\ \+\ Serial\ \[danhuk]\\Projects\\signup_signin\\signup_signin\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='tutorEntities']/@connectionString" />
-  </parameter>
-</parameters>
