@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="col-md-10 col-md-offset-1">
+            <div class="well">
+                <img href="H:\Ms Visual Studio 2013  Ultimate + Serial [danhuk]\Projects\signup_signin\signup_signin\Userimage\Zayn_Malik_April_2014.png.png" height="200" />
+
+             
+
+                <input type="button" id="btnShow" value="Show" />
+                <br />
+                <br />
+                <div id="imgContainer"></div>
+
+
+                      </div>
+
+            </div>
+   
+    
+
+
+
+
+</div>
+
+    <div id="divError" class="alert alert-danger collapse">
+        <a id="linkClose" href="#" class="close">&times;</a>
+        <div id="divErrorText"></div>
+    </div>
+    
+
+
+
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+                <script type="text/javascript">
+
+                    $("#btnShow").click(function () {
+
+                      
+                        var options = {};
+                        options.url = "api/images/";
+                        options.type = "GET";
+                        options.dataType = "json";
+                        options.contentType = "application/json";
+                        options.success = function (results) {
+                            $("#imgContainer").empty();
+                            
+                            
+                            $("#imgContainer").append('<img src="api/images?id=' + results[0] + '" />' );
+
+                           
+                            
+
+                      //      for (var i = 0; i < results.length; i++) {
+                                            //      }
+                          
+                           
+                           
+                        };
+                        options.error = function (err) { alert(err.statusText); };
+                        $.ajax(options);
+                   
+                   
+                   });
+
+
+
+                </script>
+</body>
+</html>
