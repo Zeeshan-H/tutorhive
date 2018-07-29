@@ -26,7 +26,7 @@ namespace signup_signin.Controllers
             if (httpRequest.Files.Count > 0)
             {
                 string random = Guid.NewGuid().ToString();
-                string url = "https://www.dropbox.com/home/UserImage/" + random + httpRequest.Files[0].FileName.Substring(httpRequest.Files[0].FileName.LastIndexOf('.'));
+                string url = "/UserImage/" + random + httpRequest.Files[0].FileName.Substring(httpRequest.Files[0].FileName.LastIndexOf('.'));
                 string path = System.Web.Hosting.HostingEnvironment.MapPath(url);
                 httpRequest.Files[0].SaveAs(path);
                 std.Path = "http://tutorsrep.azurewebsites.net/" + url;
