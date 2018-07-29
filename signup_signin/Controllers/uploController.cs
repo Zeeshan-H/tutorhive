@@ -29,7 +29,7 @@ namespace signup_signin.Controllers
                 string url = "/UserImage/" + random + httpRequest.Files[0].FileName.Substring(httpRequest.Files[0].FileName.LastIndexOf('.'));
                 string path = System.Web.Hosting.HostingEnvironment.MapPath(url);
                 httpRequest.Files[0].SaveAs(path);
-                std.Path = "http://https://github.com/shahraizali/tutor_api/tree/master/signup_signin/" + url;
+                std.Path = "http://tutorsrep.azurewebsites.net/" + url;
             }
             entities.imgs.Add(std);
             entities.SaveChanges();
