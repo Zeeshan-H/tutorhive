@@ -162,7 +162,6 @@ namespace signup_signin.Controllers
                         entity.Subjects = tutor.Subjects; 
                         entity.Name = tutor.Name;
                         entity.Gender = tutor.Gender;
-                        entity.Email = tutor.Email;
                         entity.Address = tutor.Address;
                         entity.Dob = tutor.Dob;
                         entity.image = tutor.image;
