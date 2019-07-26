@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hello Hamza</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+
+    <body style="padding-top:20px">
+        <div class="col-md-10 col-md-offset-1">
+
+        <div class="page-header">
+
+          <h1 class="alert-success">Hello Hamza</h1>  
+        </div>
+
+            <div class="body-content">
+
+                <ul class="alert-danger">
+
+                    <li>First goto https://tutorsrep.azurewebsites.net/api/account/register with a post request</li>
+
+                    <bold>You will notice that it does not support Get method, so open postman and hit same url.</bold>
+                    <bold>Note in header called body enter these credentials as json(application/json): 
+                    
+                  <li>  <bold class="glyphicon-bold">
+                    {
+                    "email": "any email", 
+                   <li>     "Names": "any first name", </li>                
+                <li>        "Gender": "Male or female", </li>
+                <li>        "Domain": "either tutor or student", </li>
+				<li>        "Dob": "Any Date of birth",</li>
+				<li>        "Address": "Any address",</li>
+               <li>         "password": "any password", <li />
+                 <li>       "confirmpassword": "same password" </li>
+                    
+                    
+                    
+                    }
+
+
+                    <li>You will be registered. Now go to https://tutorsrep.azurewebsites.net/signin with a post request</li>
+                    <li>Under body header go to w-www-form-urlencoded, enter these values</li>
+                    <li>username, value="the email you registered with"</li>
+                    <li>password, value="the password you registered with" </li>
+                    <li>grant_type, value="password"
+                    </bold>
+
+                    
+
+                </ul>
+
+                <ul class="alert-warning">
+
+
+                    <li>You can also visit https://tutorsrep.azurewebsites.net/register.html </li>
+                    <li>Just enter the credetials and register yourself</li>
+                    <li>After that goto https://tutorsrep.azurewebsites.net/login.html </li>
+                    <li>Now enter the username and password you registered with, you will be redirected to the page Data.html</li>
+                    <li>Note if you dont type in the same password, you wont be redirected. So thats authorization</li>
+
+               </ul>
+
+
+
+
+
+            </div>
+
+
+
+            </div>
+
+        </body>
+
+    
+</html>
