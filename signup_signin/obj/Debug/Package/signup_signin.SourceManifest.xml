@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sitemanifest>
-  <IisApp path="H:\Ms Visual Studio 2013  Ultimate + Serial [danhuk]\Projects\signup_signin\signup_signin\obj\Debug\Package\PackageTmp" managedRuntimeVersion="v4.0" />
-  <setAcl path="H:\Ms Visual Studio 2013  Ultimate + Serial [danhuk]\Projects\signup_signin\signup_signin\obj\Debug\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="H:\Ms Visual Studio 2013  Ultimate + Serial [danhuk]\Projects\signup_signin\signup_signin\obj\Debug\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
-</sitemanifest>
